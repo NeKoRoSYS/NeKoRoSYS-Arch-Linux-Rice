@@ -27,7 +27,8 @@ echo "Setting wallpaper: $SELECTED_FILE"
 # Устанавливаем обои через hyprpaper
 hyprctl hyprpaper unload all
 hyprctl hyprpaper preload "$WALL"
-hyprctl hyprpaper wallpaper ", $WALL"
+hyprctl hyprpaper wallpaper "eDP-1, $WALL"
+hyprctl hyprpaper wallpaper "DP-1, $WALL"
 echo "Wallpaper set successfully"
 
 # Применяем pywal
