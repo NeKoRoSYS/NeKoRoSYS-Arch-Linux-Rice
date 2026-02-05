@@ -66,7 +66,9 @@ cp -rv Downloads ~/
 echo -e "${BLUE}Setting script permissions...${NC}"
 chmod +x ~/.config/hypr/scripts/*.sh 2>/dev/null
 chmod +x ~/.config/hypr/scripts/wallpapers/*.sh 2>/dev/null
-
+echo -e "${BLUE}Enabling waybar...${NC}"
+sudo systemctl enable ~/.config/systemd/user/waybar.service
 echo -e "${GREEN}Installation complete!${NC}"
+
 
 
