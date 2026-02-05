@@ -12,4 +12,4 @@ Based on [mkhmtolzhas' rice](https://github.com/mkhmtolzhas/Invincible-Dots).
 
 ## Other Dependencies (Read them to install properly)
 - Auto-stop animated wallpapers https://github.com/pvtoari/mpvpaper-stop (dependencies: cmake, cjson)
-  - Used at `set-wallpaper.sh` and `check-video.sh` in `~/.config/hypr/scripts/wallpapers/` to save CPU/RAAN usage.
+  - Used at `set-wallpaper.sh` and `check-video.sh` in `~/.config/hypr/scripts/wallpapers/` to save CPU/RAM usage.
