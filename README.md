@@ -23,11 +23,14 @@ Based on [mkhmtolzhas' rice](https://github.com/mkhmtolzhas/Invincible-Dots). I 
 - The screenshot and clipboard features need `grim`, `slurp`, `hyprshot`, `wl-clipboard`, and `cliphist` to run.
   - Install them via `sudo pacman -S grim wl-clipboard cliphist`. (Automatically provided by `pkglist.txt` if you used the `install.sh` bash file)
 <br>
+<br>
 
 ![Screenshot](image.png) 
 <br>
 <br>
+<br>
 ![Screenshot](image-3.png) 
+<br>
 <br>
 <br>
 ![Screenshot](image-2.png) 
