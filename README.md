@@ -1,9 +1,16 @@
-# NeKoRoSYS's Arch Linux Rice
+# NeKoRoSYS's Arch Dotfiles
 Based on [mkhmtolzhas' rice](https://github.com/mkhmtolzhas/Invincible-Dots).
 
 ## Features
+- One-tap installer script
+  - use `git clone https://github.com/NeKoRoSYS/NeKoRoSYS-Arch-Dotfiles`
+  - then `cd NeKoRoSYS-Arch-Dotfiles`
+  - and finally, `bash install.sh` to install the dotfiles.
 - Advanced wallpaper handling
   - Supports both image (via swww) and video (via mpvpaper) formats
+  - Border colors and UI elements have dynamic color schemes
+- Familiar waybar setup
+  - Built to feel like a windows taskbar, but with a sleek and straightforward UI/UX design
 
 ## Notes
 - The installer assumes you already installed `base-devel`, `git`, `yay`, `flatpak`.
