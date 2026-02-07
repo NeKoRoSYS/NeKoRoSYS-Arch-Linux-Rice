@@ -5,6 +5,10 @@ Based on [mkhmtolzhas' rice](https://github.com/mkhmtolzhas/Invincible-Dots). I 
 <br>
 ![Screenshot](image.png) 
 <br>
+![Screenshot](image-3.png) 
+<br>
+![Screenshot](image-2.png) 
+<br>
 <br>
 ## Features
 - **One-tap Installer Script**
