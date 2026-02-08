@@ -69,8 +69,9 @@ NeKoRoSYS's HyprDots focuses on simplicity and modularity.
   - Clipboard history via `cliphist`.
 
 - **Advanced Wallpaper Handling**
-  - Supports both image (via `swww`) and video (via `mpvpaper`) formats.
+  - Supports both online (yes, online.) and offline image (via `swww`) and video (via `mpvpaper`) formats.
     - `mpvpaper` automatically stops if an app is on fullscreen mode to save CPU, RAM, or GPU space.
+    - Paste image or video links with valid file extensions in the wofi prompt and the download will automatically be processed, saved, and set as your new wallpaper.
   - Border colors and UI elements have dynamic color schemes.
 
 - **Select Waybar Skins**
