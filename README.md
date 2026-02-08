@@ -9,7 +9,7 @@ Based on [mkhmtolzhas' rice](https://github.com/mkhmtolzhas/Invincible-Dots). I 
 | :---: |
 | [🔗 Dependencies](#dependencies) |
 | [🚀 Features](#features) |
-| [🔨 Waybar Skins](#how-to-make-skins) |
+| [🔨 Waybar Skins](#waybar-skins) |
 | [📝 Notes](#notes) |
 | [📋 TODO](#todo) |
 
@@ -84,6 +84,15 @@ Make sure to analyze the directory structure of `~/.config/waybar/skins` and how
 You have two options:
 - Install someone else's Waybar setup and then manually adjust its files to correctly import or include; or
 - Make your own. ¯\_(ツ)_/¯
+<br>
+<br>
+
+![Screenshot](image-4.png) 
+<br>
+<br>
+<br>
+![Screenshot](image-5.png) 
+<br>
 <br>
 
 ## TODO
