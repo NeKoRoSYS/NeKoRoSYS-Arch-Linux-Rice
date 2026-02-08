@@ -1,17 +1,15 @@
 #!/bin/bash
 
-# =============================================================================
-# Arch Linux Rice Installation Script (Fixed Version)
-# =============================================================================
-
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 RED='\033[0;31m'
 NC='\033[0m'
 
+echo -e "# ======================================================= #"
+echo -e "#             NecroDots Installation Wizard               #"
+echo -e "# ======================================================= #\n "
 echo -e "${BLUE}Starting installation...${NC}"
 
-# 1. Check for yay
 if ! command -v yay &> /dev/null; then
     echo -e "${RED}Error: yay is not installed.${NC}"
     exit 1
@@ -22,7 +20,6 @@ if ! command -v flatpak &> /dev/null; then
     exit 1
 fi
 
-# 2. Install System Dependencies
 if [ -f "pkglist.txt" ]; then
     echo -e "${BLUE}Installing packages from pkglist.txt...${NC}"
     yay -S --needed --noconfirm $(cat pkglist.txt)
@@ -59,7 +56,6 @@ backup_config ~/.config/hypr
 backup_config ~/.config/waybar
 backup_config ~/.config/wofi
 
-# 3. Create structure and Copy Configs
 echo -e "${BLUE}Deploying configuration files...${NC}"
 mkdir -p ~/.config
 cp -rv .config ~/
@@ -75,15 +71,12 @@ fi
 cp .face.icon ~/
 cp change-avatar.sh ~/
 
-# 4. Path Replacement Logic
-# This handles the replacement in the newly copied ~/.config files
 SEARCH="/home/nekorosys"
 REPLACE="/home/$USER"
 
 echo -e "${BLUE}Replacing $SEARCH with $REPLACE in config files...${NC}"
 find "$HOME/.config" -type f -exec grep -l "$SEARCH" {} + 2>/dev/null | xargs -r sed -i "s|$SEARCH|$REPLACE|g" 2>/dev/null
 
-# 6. Permissions and Services
 echo -e "${BLUE}Setting script permissions...${NC}"
 find ~/.config/hypr/scripts -name "*.sh" -exec chmod +x {} + 2>/dev/null
 echo -e "${BLUE}Enabling waybar...${NC}"
