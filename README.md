@@ -19,7 +19,7 @@ Based on [mkhmtolzhas' rice](https://github.com/mkhmtolzhas/Invincible-Dots). I 
 > [!CAUTION]
 > **HARDWARE SPECIFIC CONFIGURATION**<br>
 >
-> Some environment variables and params at `~/.config/hypr/configs/environment.conf/` and `~/.config/hypr/scripts/set-wallpaper.conf/` (the `mpvpaper` part, also check `check-video.sh`) require an NVIDIA graphics card. Although it may be generally safe to leave it as is upon installing to a machine without such GPU, I reconmmend commenting it out or replacing it with a variable that goes according to your GPU.
+> Some environment variables and params at `~/.config/hypr/configs/environment.conf/` and `~/.config/hypr/scripts/set-wallpaper.conf/` (the `mpvpaper` part, also check `check-video.sh`) require an NVIDIA graphics card. Although it may be generally safe to leave it as is upon installing to a machine without such GPU, I recommend commenting it out or replacing it with a variable that goes according to your GPU.
 > 
 > The [System Booting](#system-booting) section contains settings specifically optimized for a dual-GPU laptop (Intel 620/Nvidia 940MX). 
 > **Do not** copy the `GRUB_CMDLINE_LINUX_DEFAULT` or `mkinitcpio` modules unless you have identical hardware, as this may prevent your system from booting.
