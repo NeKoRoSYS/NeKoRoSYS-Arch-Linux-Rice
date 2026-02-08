@@ -18,14 +18,18 @@ Based on [mkhmtolzhas' rice](https://github.com/mkhmtolzhas/Invincible-Dots). I 
 ## Dependencies
 - Auto-pause animated wallpapers via [mpvpaper-stop](https://github.com/pvtoari/mpvpaper-stop) (dependencies: cmake, cjson)
   - Used at `set-wallpaper.sh` and `check-video.sh` in `~/.config/hypr/scripts/wallpapers/` to save CPU/RAM usage.
+ 
 - This rice uses `wofi` to run actions and apps.
   - Install via `sudo pacman -S wofi`.
   - Some apps like `mpvpaper` needs to be ran using `prime-run` and `gamemoderun`
     - Install via `sudo pacman -S nvidia-prime gamemode`.
   - (Automatically provided by `pkglist.txt` if you used the `install.sh` bash file)
+
 - `hyprland` uses `hyprdile` and `hyprlock`.
   - Install them via `sudo pacman -S hyprlock hypridle`. (Automatically provided by `pkglist.txt` if you used the `install.sh` bash file)
+
 - Waybar was set up to use `kitty`, `Mozilla Firefox`, and `dolphin`. You can change this if you want at `~/.config/waybar/config.jsonc`.
+
 - The screenshot and clipboard features need `grim`, `slurp`, `hyprshot`, `wl-clipboard`, and `cliphist` to run.
   - Install them via `sudo pacman -S grim wl-clipboard cliphist`. (Automatically provided by `pkglist.txt` if you used the `install.sh` bash file)
 <br>
@@ -44,7 +48,9 @@ Based on [mkhmtolzhas' rice](https://github.com/mkhmtolzhas/Invincible-Dots). I 
 <br>
 
 ## Features
+
 NeKoRoSYS's HyprDots focuses on simplicity and modularity.
+
 - **One-tap Installer Script**
   - use `git clone https://github.com/NeKoRoSYS/NeKoRoSYS-Arch-Dotfiles`
   - then `cd NeKoRoSYS-Arch-Dotfiles`
@@ -53,6 +59,7 @@ NeKoRoSYS's HyprDots focuses on simplicity and modularity.
     - The installer assumes you already installed `base-devel`, `git`, `yay`, `flatpak`.
     - The installer assumes you have turned on mirror link downloads for `pacman`.
     - Don't be scared if `sed` says it can't read a file or directory in the installer. It's part of the function to replace every occurence of `/home/nekorosys` with your username and it simply cant find one at those locations.
+   
 - **Window Controls**
   - Maximize
   - Fullscreen
@@ -60,13 +67,16 @@ NeKoRoSYS's HyprDots focuses on simplicity and modularity.
   - Toggle Floating Window
   - Pseudo-floating/organized windows
   - Change tile placement
+
 - **Copying and Pasting**
   - Screenshot support via `hyprshot` .
   - Clipboard history via `cliphist`.
+
 - **Advanced Wallpaper Handling**
   - Supports both image (via `swww`) and video (via `mpvpaper`) formats.
     - `mpvpaper` automatically stops if an app is on fullscreen mode to save CPU, RAM, or GPU space.
   - Border colors and UI elements have dynamic color schemes.
+
 - **Select Waybar Skins**
   - Legacy
     - Sleek and straightforward design.
@@ -75,6 +85,7 @@ NeKoRoSYS's HyprDots focuses on simplicity and modularity.
     - Modern and minimalistic.
     - Beautiful design.
   - And the best part? You can add your own!
+
 - **Select Hyprlock Layouts**
   - Legacy
     - Simple and functional.
@@ -105,7 +116,9 @@ You have two options:
 <br>
 
 ## Optional
+
 Mostly personal notes just in case I switch over to another PC. Do NOT copy my Grub Linux CMDLINE and mkinitcpio modules unless you also have a laptop with old hybrid GPUs (Intel Graphics 620 and Nvidia GeForce 940mx).
+
 ### System Booting
 - Use [MineGrub](https://github.com/Lxtharia/minegrub-world-sel-theme) theme for Grub.
 - Identify GPU names.
@@ -121,8 +134,10 @@ Mostly personal notes just in case I switch over to another PC. Do NOT copy my G
   - `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 - Modify `/etc/mkinitcpio.conf` (`MODULES` for GPU and `HOOKS` for `plymouth` after `base udev`)
   - `sudo mkinitcpio -P`
+ 
 ### Boot Animations and Login
 - Use `plymouth` and `greetd` (`nwg-hello`)
+
 ### Fix Boosted/Noisy Mic on OBS and Discord (pipewire)
 - Install `alsa-utils` and `noise-suppression-for-voice`
   - `wpctl status`
@@ -163,5 +178,6 @@ Mostly personal notes just in case I switch over to another PC. Do NOT copy my G
     ]
     ```
   - `wpctl set-default yourNoiceCancelledID` (find in `wpctl status`)
+
 ### Quality-of-Life
 - Install [Hypremoji](https://github.com/Musagy/hypremoji)
