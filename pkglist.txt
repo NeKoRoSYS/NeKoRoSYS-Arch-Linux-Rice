@@ -47,7 +47,6 @@ reflector
 smartmontools
 sni-qt
 socat
-sway
 swaync
 swww
 timeshift
