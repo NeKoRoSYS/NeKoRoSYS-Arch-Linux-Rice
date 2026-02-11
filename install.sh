@@ -64,6 +64,8 @@ backup_config ~/.config/kitty
 backup_config ~/.config/systemd
 backup_config ~/.config/wallpapers
 backup_config ~/.config/hypr
+backup_config ~/.config/hypremoji
+backup_config ~/.config/swaync
 backup_config ~/.config/waybar
 backup_config ~/.config/wofi
 
