@@ -1,16 +1,20 @@
 #!/bin/bash
 
-if systemctl --user is-active --quiet hyprsunset.service; then
+STATUS=$(hyprctl -j hyprsunset | jq -r '.identity')
+
+if [ "$STATUS" = "false" ]; then
     # Smooth Fade
     for t in {3000..6500..250}; do
         hyprctl hyprsunset temperature $t
         sleep 0.01
     done
-    systemctl --user stop hyprsunset.service
+    hyprctl hyprsunset temperature 0
 else
-    systemctl --user start hyprsunset.service
+    for t in {3000..6500..250}; do
+        hyprctl hyprsunset temperature $t
+        sleep 0.01
+    done
+    hyprctl hyprsunset temperature 4350
 fi
 
-# THE CRITICAL FIX: Force the panel back open after the service command ends
-# Use a tiny sleep to ensure we catch it right as it tries to close
 (sleep 0.05 && swaync-client -op) &
