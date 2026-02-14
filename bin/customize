@@ -1,30 +1,35 @@
 #!/bin/bash
 
+pkill -x wofi
+makenotif customize system-run "Customize Desktop" "Choose a feature to customize." "true"
+
 wallpaper="Select Wallpaper"
 waybar="Select Waybar Skin"
+wofi="Select Wofi Skin"
 lock="Select Lockscreen Layout"
 panel="Select Notification Panel Layout"
 theme="Disable $(cat $HOME/.cache/theme_mode) Mode"
-OPTIONS="$wallpaper\n$waybar\n$lock\n$panel\n$theme"
+OPTIONS="$wallpaper\n$waybar\n$wofi\n$lock\n$panel\n$theme"
 
-makenotif customize system-run "Customize Desktop" "Choose a feature to customize." "true" &
-CHOICE=$(echo -e "$OPTIONS" | wofi --dmenu --hide-search --hide-scroll --lines 5 --cache-file /dev/null --prompt "Select Action") 
-
+CHOICE=$(echo -e "$OPTIONS" | wofi --dmenu --hide-search --hide-scroll --lines 6 --cache-file /dev/null --prompt "Select Action")
 case "$CHOICE" in
 	"$wallpaper")
-		bash ~/.config/hypr/scripts/change-wallpaper.sh
+		bash ~/.config/hypr/scripts/customize-feature.sh wallpaper
 		;;
 	"$waybar")
-		bash ~/.config/hypr/scripts/change-waybar.sh
+		bash ~/.config/hypr/scripts/customize-feature.sh waybar
+		;;
+	"$wofi")
+		bash ~/.config/hypr/scripts/customize-feature.sh wofi
 		;;
 	"$lock")
-		bash ~/.config/hypr/scripts/change-lockscreen.sh
+		bash ~/.config/hypr/scripts/customize-feature.sh lockscreen
 		;;
 	"$theme")
 		bash ~/.config/hypr/scripts/wallpapers/theme-switcher.sh
 		;;
 	"$panel")
-		bash ~/.config/hypr/scripts/change-panel.sh
+		bash ~/.config/hypr/scripts/customize-feature.sh panel
 		;;
 	*)
 		exit 1
