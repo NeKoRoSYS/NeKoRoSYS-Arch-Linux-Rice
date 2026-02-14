@@ -215,6 +215,7 @@ Mostly personal notes just in case I switch over to another PC. Do NOT copy my G
 
 ### Quality-of-Life
 - Install [Hypremoji](https://github.com/Musagy/hypremoji)
+- Install `blueman` and `r-quick-share` for seamless bluetooth support.
 - Fix waybar tray disappearing after a certain amount of time.
   ```
   yay -S sni-qt
