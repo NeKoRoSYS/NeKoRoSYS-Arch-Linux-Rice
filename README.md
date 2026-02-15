@@ -56,6 +56,7 @@ Based on [mkhmtolzhas' rice](https://github.com/mkhmtolzhas/Invincible-Dots). I 
 ## Features
 
 NeKoRoDOTS focuses on simplicity and modularity.
+<br>
 
 ### Roadmap
 
